@@ -48,6 +48,7 @@ const Header = () => {
           <Link to="#">Health</Link>
           <Link to="#">Hair</Link>
           <Link to="#">Skin</Link>
+          <Link to="#">Best Sellers</Link>
           <Link to="/about">About us</Link>
           <Link to="#">Contact</Link>
         </nav>
