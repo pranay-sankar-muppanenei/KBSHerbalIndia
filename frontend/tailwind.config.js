@@ -7,6 +7,8 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "Roboto", "ui-sans-serif", "system-ui"],
         libre: ['"Libre Baskerville"', "serif"],
+        lobster: ['"Lobster Two"', 'cursive'],
+        metamorphous: ['Metamorphous', 'cursive'],
       },
     },
   },

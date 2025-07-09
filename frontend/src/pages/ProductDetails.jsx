@@ -6,6 +6,7 @@ import Footer from "../components/layout/Footer";
 import ProductDetailsCard from "../components/ui/ProductDetailsCard";
 import RatingAndReview from "../components/ui/RatingAndReview";
 import ProductCard from "../components/ui/ProductCard";
+import ExploreProducts from './ExploreProducts'
 
 const ProductDetails = () => {
   const { id } = useParams();

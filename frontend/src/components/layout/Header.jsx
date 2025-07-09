@@ -44,11 +44,11 @@ const Header = () => {
           role="navigation"
           aria-label="Main navigation"
         >
-          <Link to="#">Shop all</Link>
+          <Link to="/shopall">Shop all</Link>
           <Link to="#">Health</Link>
           <Link to="#">Hair</Link>
           <Link to="#">Skin</Link>
-          <Link to="#">Best Sellers</Link>
+          <Link to="/bestseller">Best Sellers</Link>
           <Link to="/about">About us</Link>
           <Link to="#">Contact</Link>
         </nav>
