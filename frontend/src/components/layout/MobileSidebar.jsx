@@ -24,8 +24,8 @@ const MobileSidebar = ({ onClose }) => {
    </div>
       <nav className="flex flex-col gap-2 divide-y divide-gray-300 text-sm font-medium text-[#567d39] p-3 font-sans">
          <Link className='pl-3 ' to="/shopall" onClick={onClose}>Shop All</Link>
-        <Link className='pl-3 pt-2' to="#" onClick={onClose}>Health Care</Link>
-        <Link className='pl-3 pt-2' to="#" onClick={onClose}>Skin Care</Link>
+        <Link className='pl-3 pt-2' to="/health" onClick={onClose}>Health Care</Link>
+        <Link className='pl-3 pt-2' to="/skin" onClick={onClose}>Skin Care</Link>
         <Link className='pl-3 pt-2' to="/hair" onClick={onClose}>Hair Care</Link>
         <Link className='pl-3 pt-2' to="/about" onClick={onClose}>About Us</Link>
         <Link className='pl-3 pt-2' href="#" onClick={onClose}>Contact</Link>

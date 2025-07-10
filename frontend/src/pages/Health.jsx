@@ -18,7 +18,7 @@ const tabs = [
   { name: "Best seller products", value: "Best seller products" },
 ];
 
-const Hair = () => {
+const Health = () => {
  const [activeTab, setActiveTab] = useState(tabs[0].value);
   const [filtersVisible, setFiltersVisible] = useState(false);
   const [priceFilter, setPriceFilter] = useState(Infinity);
@@ -45,7 +45,7 @@ const Hair = () => {
       <Header />
       <main className="space-y-2 mb-6">
         <h1 className="text-2xl text-center mt-3 mb-3 md:text-3xl font-bold text-[#575757]">
-          Hair Products
+          Health Products
         </h1>
         <ShopAllControlBar
           tabs={tabs}
@@ -199,4 +199,4 @@ const Hair = () => {
   );
 };
 
-export default Hair;
+export default Health;
