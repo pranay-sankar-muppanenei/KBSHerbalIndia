@@ -1,49 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const products = [
-  {
-    img: '/rose.png',
-    name: 'Rose Juice',
-  },
-  {
-    img: '/shakti.jpg',
-    name: 'Shikh Pushp',
-  },
-  {
-    img: '/alovera.png',
-    name: 'Shikh Pushp',
-  },
-  {
-    img: '/alovera.png',
-    name: 'Shikh Pushp',
-  },
-  {
-    img: '/shakti.jpg',
-    name: 'Shikh Pushp',
-  },
-
-  {
-    img: '/alovera.png',
-    name: 'Aloe Vera Juice',
-  },
-  {
-    img: '/rose.png',
-    name: 'Neem Juice',
-  },
+  { img: '/rose.png', name: 'Rose Juice' },
+  { img: '/shakti.jpg', name: 'Shikh Pushp' },
+  { img: '/alovera.png', name: 'Shikh Pushp' },
+  { img: '/alovera.png', name: 'Shikh Pushp' },
+  { img: '/shakti.jpg', name: 'Shikh Pushp' },
+  { img: '/alovera.png', name: 'Aloe Vera Juice' },
+  { img: '/rose.png', name: 'Neem Juice' },
 ];
 
 const BestSellersSlider = () => {
   const [visibleCards, setVisibleCards] = useState(4);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const updateVisibleCards = () => {
-      if (window.innerWidth < 768) {
-        setVisibleCards(3);
-      } else {
-        setVisibleCards(4);
-      }
-      setCurrentIndex(0); // Reset to first when screen changes
+      setVisibleCards(window.innerWidth < 768 ? 3 : 4);
+      setCurrentIndex(0);
     };
 
     updateVisibleCards();
@@ -51,11 +27,22 @@ const BestSellersSlider = () => {
     return () => window.removeEventListener('resize', updateVisibleCards);
   }, []);
 
-  const totalSteps = products.length - visibleCards + 1;
+  const totalSteps = Math.max(products.length - visibleCards + 1, 1);
 
   const goToSlide = (idx) => {
-    setCurrentIndex(idx);
+    setCurrentIndex(idx >= totalSteps ? 0 : idx);
   };
+
+  // Auto-slide logic with pause
+  useEffect(() => {
+    if (isPaused) return;
+
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalSteps);
+    }, 1500);
+
+    return () => clearInterval(intervalRef.current);
+  }, [isPaused, totalSteps]);
 
   return (
     <section className="pt-2 pb-20 bg-white">
@@ -67,24 +54,20 @@ const BestSellersSlider = () => {
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`,
+            transform: `translateX(-${(currentIndex * 100) / products.length}%)`,
             width: `${(products.length * 100) / visibleCards}%`,
           }}
         >
           {products.map((product, idx) => (
             <div
               key={idx}
-              style={{
-                width: `${100 / products.length}%`,
-              }}
               className="flex-shrink-0 px-2 flex justify-center"
+              style={{ width: `${100 / products.length}%` }}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
               <div
-                className="bg-white rounded-[30px] overflow-hidden shadow-lg"
-                style={{
-                  width: window.innerWidth < 768 ? 127 : 250,
-                  height: window.innerWidth < 768 ? 190 : 290,
-                }}
+                className="bg-white rounded-[30px] overflow-hidden shadow-lg w-[127px] sm:w-[180px] md:w-[250px] h-[190px] sm:h-[240px] md:h-[290px]"
               >
                 <img
                   src={product.img}
@@ -103,7 +86,7 @@ const BestSellersSlider = () => {
           <span
             key={idx}
             onClick={() => goToSlide(idx)}
-            className={`w-4 h-2 rounded-full cursor-pointer ${
+            className={`w-4 h-2 rounded-full cursor-pointer transition-all ${
               currentIndex === idx ? 'bg-[#325E12] opacity-80' : 'bg-gray-300'
             }`}
           ></span>

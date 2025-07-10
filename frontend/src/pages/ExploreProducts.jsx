@@ -13,7 +13,7 @@ const productGroups = [
   ],
   [
     { label: "Sexual Wellness", img: "/Hotman.png", bg: "#FDF1B6" },
-    { label: "Heart Health", img: "/cho.png", bg: "#F7D8DC" },
+    { label: "Heart Health", img: "/cholestral.png", bg: "#F7D8DC" },
     { label: "Joint & Muscle care", img: "/Shankh pushpi.png", bg: "#D9EDD5" },
     { label: "Best Sellers", img: "/surya.png", bg: "#FCE9C7" },
   ],
@@ -55,7 +55,7 @@ function ExploreProducts() {
     >
       <img src={item.img} alt={item.label} className="h-[160px] object-contain mb-4" />
       <button
-        className="px-4 py-1 rounded-full border border-black/30 text-black font-medium text-sm shadow-sm"
+        className="px-4 py-1 font-montaga  rounded-full border border-black/30 text-black font-medium text-md shadow-sm"
         style={{
           backgroundColor: item.bg,
         }}

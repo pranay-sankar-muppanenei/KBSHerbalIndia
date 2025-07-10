@@ -9,6 +9,7 @@ module.exports = {
         libre: ['"Libre Baskerville"', "serif"],
         lobster: ['"Lobster Two"', 'cursive'],
         metamorphous: ['Metamorphous', 'cursive'],
+        montaga: ['Montaga', 'serif'],
       },
     },
   },
