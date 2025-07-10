@@ -59,7 +59,8 @@ const HealingSlider = () => {
                 className="absolute transition-all duration-500 ease-in-out"
                 style={{
                   transform: `translateX(${translateX}px) scale(${scale})`,
-                  zIndex: relativeOffset === 0 ? 20 : 10,
+                  zIndex: 20 - Math.abs(relativeOffset)
+,
                   opacity: Math.abs(relativeOffset) > visibleRange ? 0 : 1,
                 }}
               >
@@ -79,6 +80,7 @@ const HealingSlider = () => {
         <button
           onClick={nextSlide}
           className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 bg-gray-300 text-black rounded-full p-2 z-10 shadow"
+          style={{ zIndex: 50 }}
         >
           ❯
         </button>

@@ -24,31 +24,32 @@ function LandingPage() {
       <Header />
 
       {/* Hero Section */}
-     <section
-  className="bg-[url('/background.png')] bg-cover bg-center rounded-b-[30px] w-full min-h-[700px] md:h-[700px] overflow-hidden"
->
-  <div className="w-full px-4 flex flex-col md:flex-row items-center justify-between pt-10 md:pt-0 h-full">
-    {/* Image: comes first on mobile, second on desktop */}
-    <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0 md:pr-12">
-      <img
-        src="/shakthi.png"
-        alt="Shakti Pushp"
-        className="w-[300px] sm:w-[350px] md:w-[507px] max-h-[650px] rounded-[30px] object-contain"
-      />
-    </div>
-    {/* Text: comes second on mobile, first on desktop */}
-    <div className="order-2 md:order-1 w-full md:w-1/2 text-center md:text-left md:pl-12">
-      <h2 className="font-lobster text-[40px] sm:text-[55px] md:text-[70px] leading-[1] text-[#303615]">
-        For memory power & <br /> Immunity
-      </h2>
-      <Link to="/shopall">
-        <button className="flex items-center justify-center w-[200px] sm:w-[220px] md:w-[242px] h-[44px] mt-6 mx-auto md:mx-0 rounded-[30px] bg-white font-lobster text-black text-[20px] sm:text-[25px] md:text-[35px] shadow-md transition">
-          Shop Now
-        </button>
-      </Link>
-    </div>
-  </div>
-</section>
+<section className="bg-[url('/background.png')] bg-cover bg-center rounded-b-[30px] w-full min-h-[700px] md:h-[700px] overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-20 flex flex-col md:flex-row items-center justify-between pt-10 md:pt-0 h-full">
+        
+        {/* Image: comes first on mobile, second on desktop */}
+        <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+          <img
+            src="/shakthi.png"
+            alt="Shakti Pushp"
+            className="w-[300px] sm:w-[350px] md:w-[507px] max-h-[650px] rounded-[30px] object-contain"
+          />
+        </div>
+
+        {/* Text: comes second on mobile, first on desktop */}
+        <div className="order-2 md:order-1 w-full md:w-1/2 text-center md:text-left">
+          <h2 className="font-lobster text-[40px] sm:text-[55px] md:text-[70px] leading-[1] text-[#303615]">
+            For memory power & <br /> Immunity
+          </h2>
+          <Link to="/shopall">
+            <button className="flex items-center justify-center w-[200px] sm:w-[220px] md:w-[242px] h-[44px] mt-6 mx-auto md:mx-0 rounded-[30px] bg-white font-lobster text-black text-[20px] sm:text-[25px] md:text-[35px] shadow-md transition">
+              Shop Now
+            </button>
+          </Link>
+        </div>
+        
+      </div>
+    </section>
 
 
       {/* Shop By Concern Section */}
@@ -68,23 +69,28 @@ function LandingPage() {
             ))}
         </div>
       </section>
-     <section className="bg-[#7B9A5E] w-full min-h-[710px] py-10 px-0 flex flex-col md:flex-row items-center justify-center">
-  {/* Image */}
-  <div className="w-full order-2 md:order-1 md:w-1/2 flex md:justify-end justify-center px-0">
-    <img
-      src="/herbal.png"
-      alt="Herbal Bowl"
-      className="w-[400px] md:w-[460px] lg:w-[500px] h-auto object-contain"
-    />
-  </div>
+     <section className="bg-[#7B9A5E] w-full min-h-[650px] py-10">
+  <div className="container mx-auto px-4 lg:px-20 flex flex-col md:flex-row items-center justify-between h-full">
+    
+    {/* Image */}
+    <div className="w-full order-2 md:order-1 md:w-1/2 flex md:justify-end justify-center">
+      <img
+        src="/herbal.png"
+        alt="Herbal Bowl"
+        className="w-[400px] md:w-[460px] lg:w-[500px] h-auto object-contain"
+      />
+    </div>
 
-  {/* Text */}
-  <div className="w-full order-1 md:order-2 md:w-1/2 px-6 text-white">
-    <h3 className="text-2xl sm:text-3xl md:text-4xl leading-snug font-semibold font-metamorphous">
-      KBS HERBAL India brings the timeless wisdom of Ayurveda, channeling our dadì’s trusted nuskhe into products crafted from healing ingredients that nurture you from within.
-    </h3>
+    {/* Text */}
+    <div className="w-full order-1 md:order-2 md:w-1/2 text-white">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl leading-snug font-metamorphous">
+        KBS HERBAL India brings the timeless wisdom of Ayurveda, channeling our dadì’s trusted nuskhe into products crafted from healing ingredients that nurture you from within.
+      </h3>
+    </div>
+
   </div>
-      </section>
+</section>
+
 
 
       <ExploreProducts/> 

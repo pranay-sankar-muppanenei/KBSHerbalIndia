@@ -55,7 +55,7 @@ function ExploreProducts() {
     >
       <img src={item.img} alt={item.label} className="h-[160px] object-contain mb-4" />
       <button
-        className="px-4 py-1 font-montaga  rounded-full border border-black/30 text-black font-medium text-md shadow-sm"
+        className="px-2 py-1 font-montaga  rounded-[5px] border border-black/50 text-black font-medium text-md shadow-sm"
         style={{
           backgroundColor: item.bg,
         }}

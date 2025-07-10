@@ -45,9 +45,9 @@ const Header = () => {
           aria-label="Main navigation"
         >
           <Link to="/shopall">Shop all</Link>
-          <Link to="#">Health</Link>
-          <Link to="#">Hair</Link>
-          <Link to="#">Skin</Link>
+          <Link to="/health">Health</Link>
+          <Link to="/hair">Hair</Link>
+          <Link to="/skin">Skin</Link>
           <Link to="/bestseller">Best Sellers</Link>
           <Link to="/about">About us</Link>
           <Link to="#">Contact</Link>
