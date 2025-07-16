@@ -1,10 +1,12 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo,useEffect } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import Seo from "../components/ui/Seo";
 import ShopAllControlBar from "../components/ui/ShopAllControlBar";
 import ProductCard from "../components/ui/ProductCard";
 import { PRODUCTS_DUMMY_DATA } from "../data/ProductsDummyData";
+import { useLocation } from 'react-router-dom';
+
 
 const tabs = [
   { name: "All", value: "All" },
@@ -23,6 +25,14 @@ const ShopAll = () => {
   const [filtersVisible, setFiltersVisible] = useState(false);
   const [priceFilter, setPriceFilter] = useState(Infinity);
   const [ratingFilter, setRatingFilter] = useState(0);
+const location = useLocation();
+
+  
+  useEffect(() => {
+    if (location.state && location.state.activeTab) {
+      setActiveTab(location.state.activeTab);
+    }
+  }, [location.state]);
 
   const filteredProducts = useMemo(() => {
     const filtered = PRODUCTS_DUMMY_DATA.filter((product) => {

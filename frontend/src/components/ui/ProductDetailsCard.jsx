@@ -101,7 +101,7 @@ const ProductDetailsCard = ({ product }) => {
       </div>
 
       {/* Certifications */}
-      <div className="flex gap-10 my-4 flex-wrap justify-center items-center">
+      <div className="flex gap-10 bg-white rounded-full p-2 my-4 flex-wrap justify-center items-center">
         <img className="w-[40px] h-[40px]" src='/images/accreditation/gmp.webp' alt="gmp"/>
         <img className="w-[50px] h-[40px]" src="/images/accreditation/iso.jpg" alt='iso'/>
         <img className="w-[80px] h-[40px]" src="/images/accreditation/iso2015.png" alt='iso 9001:2015'/>

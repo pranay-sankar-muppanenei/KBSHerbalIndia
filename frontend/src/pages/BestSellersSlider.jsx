@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import {Link} from "react-router-dom"
 
 const products = [
   { img: '/rose.png', name: 'Rose Juice' },
@@ -59,7 +60,8 @@ const BestSellersSlider = () => {
           }}
         >
           {products.map((product, idx) => (
-            <div
+            <Link
+              to='/bestseller'
               key={idx}
               className="flex-shrink-0 px-2 flex justify-center"
               style={{ width: `${100 / products.length}%` }}
@@ -75,7 +77,7 @@ const BestSellersSlider = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

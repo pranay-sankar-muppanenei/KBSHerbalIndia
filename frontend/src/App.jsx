@@ -11,6 +11,15 @@ import BestSeller from './pages/BestSeller'
 import Hair from './pages/Hair'
 import Skin from './pages/Skin'
 import Health from './pages/Health'
+import Mind from './pages/Mind'
+import Lungs from './pages/Lungs'
+import Liver from './pages/Liver'
+import Ortho from './pages/Ortho'
+import Heart from './pages/Heart'
+import Kidney from './pages/Kidney'
+import Stomach from './pages/Stomach'
+import Sexual from './pages/Sexual'
+import Immunity from './pages/Immunity'
 import './App.css'
 
 
@@ -27,6 +36,16 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/terms-and-conditions' element={<TermsAndCondition/>}/>
       <Route path='/shipping-return-refunds' element={<ShippingReturnRefunds/>}/>
+
+      <Route path='/mind' element={<Mind />} />
+      <Route path='/lungs' element={<Lungs />} />
+      <Route path='/liver' element={<Liver />} />
+      <Route path='/ortho' element={<Ortho />} />
+      <Route path='/heart' element={<Heart />} />
+      <Route path='/kidney' element={<Kidney />} />
+      <Route path='/stomach' element={<Stomach />} />
+      <Route path='/sexual' element={<Sexual />} />
+      <Route path='/immunity' element={<Immunity />} />
     </Routes>
   )
   

@@ -59,14 +59,22 @@ function LandingPage() {
         </h3>
 
         <div className="w-full max-w-[1400px] mx-auto flex flex-wrap justify-center gap-y-6 sm:gap-y-12 gap-x-4 sm:gap-x-10">
-            {concerns.map((item) => (
-            <div key={item.label} className="flex flex-col items-center">
-                <div className="w-[100px] h-[100px] sm:w-[240px] sm:h-[250px] rounded-[100px] bg-[#D9D9D9]/20 border border-black/30 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] flex items-center justify-center">
-                <img src={item.img} alt={item.label} className="w-[60%] h-[60%] object-contain" />
-                </div>
-                <p className="mt-2 sm:mt-4 text-center text-black font-medium text-sm sm:text-lg">{item.label}</p>
-            </div>
-            ))}
+            {concerns.map((item) => {
+  const route = `/${item.label.toLowerCase()}`; // automatically use label as path
+
+  return (
+    <Link
+      key={item.label}
+      to={route}
+      className="flex flex-col items-center cursor-pointer"
+    >
+      <div className="w-[100px] h-[100px] sm:w-[240px] sm:h-[250px] rounded-[100px] bg-[#D9D9D9]/20 border border-black/30 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] flex items-center justify-center">
+        <img src={item.img} alt={item.label} className="w-[60%] h-[60%] object-contain" />
+      </div>
+      <p className="mt-2 sm:mt-4 text-center text-black font-medium text-sm sm:text-lg">{item.label}</p>
+    </Link>
+  );
+})}
         </div>
       </section>
      <section className="bg-[#7B9A5E] w-full min-h-[650px] py-10">
