@@ -28,7 +28,7 @@ const MobileSidebar = ({ onClose }) => {
         <Link className='pl-3 pt-2' to="/skin" onClick={onClose}>Skin Care</Link>
         <Link className='pl-3 pt-2' to="/hair" onClick={onClose}>Hair Care</Link>
         <Link className='pl-3 pt-2' to="/about" onClick={onClose}>About Us</Link>
-        <Link className='pl-3 pt-2' href="#" onClick={onClose}>Contact</Link>
+        <Link className='pl-3 pt-2' href="contact" onClick={onClose}>Contact</Link>
       </nav>
        <div className="flex items-center gap-3 p-3">
                   <a href="https://www.instagram.com/kbsherbal/" target="_blank" rel="noopener noreferrer" className="hover:text-[#577e3a]">

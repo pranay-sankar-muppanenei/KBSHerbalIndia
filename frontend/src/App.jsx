@@ -20,6 +20,11 @@ import Kidney from './pages/Kidney'
 import Stomach from './pages/Stomach'
 import Sexual from './pages/Sexual'
 import Immunity from './pages/Immunity'
+import CartPage from './pages/Cart'
+import FaqPage from './pages/faq'
+import ContactPage from './pages/ContactPage'
+import ChatWidget from './pages/ChatWidget'
+import UploadPage from './pages/UploadPage'
 import './App.css'
 
 
@@ -36,7 +41,10 @@ function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/terms-and-conditions' element={<TermsAndCondition/>}/>
       <Route path='/shipping-return-refunds' element={<ShippingReturnRefunds/>}/>
-
+      <Route path='/chat' element={<ChatWidget/>}/>
+      <Route path='/contact' element={<ContactPage/>}/>
+      <Route path='/cart' element={<CartPage/>}/>
+      <Route path='/faq' element={<FaqPage/>}/>
       <Route path='/mind' element={<Mind />} />
       <Route path='/lungs' element={<Lungs />} />
       <Route path='/liver' element={<Liver />} />
@@ -46,6 +54,7 @@ function App() {
       <Route path='/stomach' element={<Stomach />} />
       <Route path='/sexual' element={<Sexual />} />
       <Route path='/immunity' element={<Immunity />} />
+      <Route path='/upload' element={<UploadPage />} />
     </Routes>
   )
   

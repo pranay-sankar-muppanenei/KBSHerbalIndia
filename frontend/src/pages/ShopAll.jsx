@@ -6,6 +6,7 @@ import ShopAllControlBar from "../components/ui/ShopAllControlBar";
 import ProductCard from "../components/ui/ProductCard";
 import { PRODUCTS_DUMMY_DATA } from "../data/ProductsDummyData";
 import { useLocation } from 'react-router-dom';
+import ChatWidget from "./ChatWidget";
 
 
 const tabs = [
@@ -203,6 +204,7 @@ const location = useLocation();
           </div>
         </div>
       </main>
+      <ChatWidget/>
       <Footer />
     </>
   );

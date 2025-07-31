@@ -50,7 +50,7 @@ const Header = () => {
           <Link to="/skin">Skin</Link>
           <Link to="/bestseller">Best Sellers</Link>
           <Link to="/about">About us</Link>
-          <Link to="#">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         {/* Action Icons */}
